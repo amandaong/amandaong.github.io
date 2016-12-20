@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300i,400|Lato');
+
+/*****------------------------------GENERAL STYLING------------------------------*****/
+#navbar, .section { /*Sets font for section and nav bar*/
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none; /*removes automatic styling from a links*/
+}
+
+ul {
+    list-style-type: none; 
+}
+
+/*****------------------------------NAV BAR------------------------------*****/
+#navbar {
+    top: 0;
+    left: 0;
+    z-index: 999;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    background: rgba(255,255,255,.5);
+    width: 100%;
+    box-shadow: 7px 5px 5px rgba(42,56,73,0.3);
+    text-align: center;
+    font-size: 120%;
+}
+
+#navbar li {
+	display: inline-block;
+    width: 24.5957%;
+}
+
+#navbar li a {
+	padding: 0;
+	color: black;
+    padding: 15px 25px;
+	display: inline-block;
+    width: 84%; /*Makes width exact size of li */
+}
+
+#navbar li:hover {
+    background: rgba(255,255,255,.8); /*Darkens background when hover over li (same size as a)*/
+}
+
+/*****------------------------------HOME PAGE------------------------------*****/
+.home {
+    color: white;
+   /* background-color: rgb(52,152, 219);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url('../images/forest.jpg');
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 550%;
+    text-align: center;
+}
+
+.subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 200%;
+    text-align: center
+}
+
+/*****------------------------------ABOUT PAGE------------------------------*****/
+.about {
+    background-color: rgb(240,240,240);
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.about .title {
+    font-size: 300%;
+    text-align: left;
+    margin-bottom: 2.5%;
+    color: rgb(102,102,102);
+}
+
+.left {
+    width: 40%;
+    float: left;
+  
+}
+
+.right {
+    margin-left: 45%;
+}
+
+.description {
+    font-size: 130%;
+    color: rgb(128,128,128);
+}
+
+.space {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.headshot {
+    width: 100%;
+}
+
+/*****------------------------------ABOUT PAGE: Icons------------------------------*****/
+.iconSection {
+    font-weight: 300; /*Open Sans*/
+    font-style: italic;
+}
+
+.icon {
+    display: block;
+    position: relative; /*makes icon div the container for absolutely positioned elements (iconTitle)*/
+}
+
+.iconImage {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    font-size: 250%;
+    width: 10%;
+    
+    /*Makes image text dissapear*/
+    display: block;
+    text-indent:100%; /*indent the text just outside the containing box*/
+    white-space:nowrap; /*keep the text from wrapping back into the box*/
+    overflow:hidden; /*hide content outside the box*/
+}
+
+.iconImage.linkedIn {
+    background-image: url('../images/linkedin.png'); /*https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-512.png*/
+}
+
+.iconImage.gitHub {
+    background-image: url('../images/github.png'); /*http://image.flaticon.com/icons/png/512/23/23957.png*/
+}
+
+.iconImage.resume {
+    background-image: url('../images/resume.png'); /*https://thenounproject.com/search/?q=resume&i=557475*/ 
+}
+
+.iconTitle {
+    position: absolute;  
+    left: 12%;
+    top: 50%; /*places title halfway down its container (icon div)*/                      
+    transform: translate(0, -50%); /*move the title up by half its own height (50% means 50% of height of title) */
+    color: rgb(90,90,90);
+    font-size: 130%;
+}
+
+/*****------------------------------PROJECTS PAGE------------------------------*****/
+.projects {
+    background-color: rgb(52,152, 219);
+    padding-left: 11%;
+    padding-right: 12%;
+}
+
+.projects .left, .projects .right { /*CANNOT put padding top & bottom under .projects styling bc for some reason cuts off image of app & text :(*/
+    margin-top: 8.5%;
+    margin-bottom: 12%;
+    position: relative;
+   
+}
+
+.projects .left {
+    margin-left: 1%; /*Small margin so FOCUS app image doesn't show up on photoeditor slide*/
+}
+
+.projects .right {
+    margin-left: 40%;
+}
+
+.image {
+    width: 80%;
+    box-shadow: 7px 7px 10px rgba(42,56,73,0.4); /*[horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]*/
+}
+
+.projects .title, .projects .subtitle, .projects .description, .projects .iconTitle {
+    color: white;
+}
+
+.projects .title {
+    font-size: 380%;
+    text-align: left;
+}
+
+.projects .subtitle {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 175%;
+    text-align: left;
+}
+
+.projects .description {
+    font-size: 120%;
+}
+
+.projects .iconImage.gitHub {
+    background-image: url('../images/githubprojects.png'); /*http://image.flaticon.com/icons/png/512/23/23957.png*/
+}
+
+/*****------------------------------PROJECTS PAGE: Slideshow------------------------------*****/
+.projects .leftBtn, .projects .rightBtn {
+    /*Get rid of automatic styling of buttons*/
+    background-color: transparent;
+	border: none;
+    outline: none;
+    
+    /*Position arrows at middle of image*/
+    position: absolute; /*(0,0) position of arrows is top right corner of absolutely positioned container (.left div) */
+    top: 50%; /*moves arrows down 50% from top of .left div so top of arrow images at 50% line of .left div*/
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); /*moves arrow up by 50% of its image height*/
+    
+    /*Makes sure button image doesn't repeat, not cut off, & centered respectively*/
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 10%;
+    height: 6.8%;
+}
+
+.projects .leftBtn {
+    background-image: url('../images/leftBtn.png'); /*https://thenounproject.com/StarAndAnchor/collection/triangle-navigation/?oq=triangle&cidx=2&i=547367*/
+    left: 0;
+    display: none; /*so button appears only when hover over display div (size of the image)*/
+}
+
+.projects .rightBtn {
+    background-image: url('../images/rightBtn.png'); /*https://thenounproject.com/StarAndAnchor/collection/triangle-navigation/?oq=triangle&cidx=2&i=547369*/
+    right: 20%; /*Bc image takes up 80% of left div, image is 20% (of left div) from right (side of left div)-> Place arrow at end of image, which is 20% from right*/
+    display: none; /*so button appears only when hover over display div (size of the image)*/
+}
+
+.display { 
+    display: inline; /*Makes display take size of content (image) so that btns only appear when hover over image*/
+}
+
+.display:hover .leftBtn, .display:hover .rightBtn {
+    display: block;
+}
+
+/*****------------------------------PROJECTS PAGE: Web Slide------------------------------*****/
+.web .left {
+    margin-left: 1%;
+    margin-bottom: 0;
+    margin-top: 20%; /*Can't do top: 50%, transform: translateY(-50%); bc has padding at top from slide div*/
+    width: 50%;
+}
+
+.web .image {
+    width: 100%;
+}
+
+.web .right {
+    margin-left: 55%; /*Makes slight space btwn image of website & text*/
+}
+
+.web .leftBtn, .web .rightBtn {
+    width: 6%;
+    height: 12%;
+}
+
+.web .rightBtn {
+    right: 0; /*Places right btn at right end of display div (which is size of its content b/c of display:inline)*/
+}
+
+.web .title {
+    font-size: 275%; /*Shrink title font so title fits on 1 line*/
+    text-align: left;
+}
+
+/*****------------------------------CONTACT ME PAGE------------------------------*****/
+.contact {
+    background-color: rgb(240,240,240);
+    text-align: center;
+    padding-top: 5%;
+   
+}
+
+.contact .title, .contact .subtitle {
+    color: rgb(90,90,90);
+}
+.contact ul {
+    width: 90%;
+    text-align: center;
+
+    /*Removes indentation*/
+    margin: 0 auto;
+    padding: 0;
+}
+
+.contact ul > li {
+   display: inline-block;
+   width: 7%;
+   padding: 0.5%;
+}
+
+figure {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+figure div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contactImage {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 100%;
+    height: 50px;
+}
+
+.contactImage.resume {
+    background-image: url('../images/resume.png');
+}
+
+.contactImage.gitHub {
+    background-image: url('../images/github.png');
+}
+
+.contactImage.linkedIn {
+    background-image: url('../images/linkedin.png');
+}
+
+figcaption {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+/***---------------Footer---------------***/
+.footer {
+    margin-top: 12%;
+    font-size: 80%;
+}
+
+.contact a, .footer {
+    color: rgb(90,90,90);
+}
+
+.mail {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    padding: 1%;
+    background-color: rgb(52,152, 219);
+    border-radius: 10px;
+}
+
+.mail a {
+    color: white;
+}
+
+.mail:hover{
+    background-color: rgb(52,184, 255);
+}
+
+.contact ul > li:hover > a { /*Get li of contact me ul list -> on hover, affect the a link contained in li*/
+    color: rgb(130,130,130);
+}
+

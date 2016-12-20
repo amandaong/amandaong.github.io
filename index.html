@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Amanda Ong's Personal Website</title>
+        <link rel="stylesheet" href="styles/styles.css" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="styles/jquery.fullPage.css" />
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>  
+        <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    
+    <body>
+        <ul id = "navbar">
+            <li><a href="#firstPage"> Home </a></li>
+            <li><a href="#secondPage"> About Me </a></li>
+            <li><a href="#3rdPage"> Projects </a></li>
+            <li><a href="#4thPage"> Contact Me </a></li>
+        </ul>
+    <div id="fullpage">        
+        <div class = "section home" anchor = "firstPage">
+            <div class = "title"> Amanda Ong </div>
+            <div class = "subtitle"> Software Engineer (iOS and Web) </div>
+        </div>
+        <div class = "section about" anchor = "secondPage"> 
+            <div class = "left"> 
+                <img class = "headshot" src="images/headshot.jpg" alt="Headshot" width = "300" />
+            </div>
+            <div class = "right"> 
+                <div class = "title"> About Me </div>
+                <div class = "description"> 
+                    I am a sophomore at Cornell University, majoring in Information Science, Systems, and Technology and minoring in business. 
+                    <div class = "space"> </div>
+                    Check out some of my cool projects below!
+                </div>
+                <div class = "space"> </div>
+                <div class = "iconSection">
+                    <div class = "icon">
+                        <a class = "iconImage resume" href="https://www.dropbox.com/s/g6loicj519fdb2v/Resume.pdf?dl=0" target="_blank">HELLO</a> 
+                        <a class = "iconTitle resume" href="https://www.dropbox.com/s/g6loicj519fdb2v/Resume.pdf?dl=0" target="_blank"> Resume </a>
+                    </div>
+                    <div class = "icon">
+                        <a class = "iconImage gitHub" href="https://github.com/amandaong" target="_blank">HELLO</a> 
+                        <a class = "iconTitle gitHub" href="https://github.com/amandaong" target="_blank"> GitHub </a>
+                    </div>
+                    <div class = "icon">
+                        <a class = "iconImage linkedIn" href="https://www.linkedin.com/in/amandaong1/" target="_blank">HELLO</a>
+                        <a class = "iconTitle linkedIn" href="https://www.linkedin.com/in/amandaong1/" target="_blank"> LinkedIn </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class = "section projects" anchor = "3rdPage">
+            <div class="slide"> 
+                <div class = "left">
+                    <span class = display> <!--N2B span element to work w/  IE7/8-->
+                        <img class = "image" src="images/photoeditor1.png" alt="Photo Editor App" width = "100" />
+                        <button class="leftBtn" onclick="nextBtnPressed(1, -1)"></button> 
+                        <button class="rightBtn" onclick="nextBtnPressed(1, +1)"></button> 
+                    </span>
+                </div>
+                <div class = "right">
+                    <div class = "title"> Photo Editor App</div>
+                    <div class = "subtitle"> December 2015 </div>
+                    <div class = "space"></div>
+                    <div class = "description"> After taking CUAppDev's one-credit App Development course, I created a photo editing app that allows users to draw on photos from their camera roll. Users can adjust the opacity and size of the brush, erase, and even utilize a random color generator to pick a color. This app sparked my love for app development and encouraged me to explore my interest through other organizations on campus (i.e. iGEM and ECAFT).</div>
+                    <div class = "space"></div>
+                    <div class = "iconSection">
+                        <div class = "icon">
+                            <a class = "iconImage gitHub" href="https://github.com/amandaong/PhotoEditor" target="_blank">HELLO</a> 
+                            <a class = "iconTitle gitHub" href="https://github.com/amandaong/PhotoEditor" target="_blank"> Check out the source code on GitHub </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide"> 
+                <div class = "left">
+                    <span class = display> <!--N2B span element to work w/  IE7/8-->
+                        <img class = "image" src="images/focus1.png" alt="Focus App" width = "100" />
+                        <button class="leftBtn" onclick="nextBtnPressed(2, -1)"></button> 
+                        <button class="rightBtn" onclick="nextBtnPressed(2, +1)"></button> 
+                    </span>
+                </div>
+                <div class = "right">
+                    <div class = "title"> Focus App</div>
+                    <div class = "subtitle"> Feburary 2016</div>
+                    <div class = "space"></div>
+                    <div class = "description"> As part of the 24-hour HackBU Hackathon in Binghamton, NY, I along with three other members created a productivity app to stop users from accessing their iPhones for a set time. We utilized features such as NSTimer, Facebook SDK, NSURL, and UIPickerView to create the app.</div>
+                    <div class = "space"></div>
+                    <div class = "iconSection">
+                        <div class = "icon">
+                            <a class = "iconImage gitHub" href="https://github.com/jennywang1028/FOCUS" target="_blank">HELLO</a> 
+                            <a class = "iconTitle gitHub" href="https://github.com/jennywang1028/FOCUS" target="_blank"> Check out the source code on GitHub </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide web">
+                <div class = "left">
+                    <span class = display> <!--N2B span element to work w/  IE7/8-->
+                        <img class = "image" src="images/applefest1.png" alt="Apple Fest Website" width = "300" />
+                        <button class="leftBtn" onclick="nextBtnPressed(3, -1)"></button> 
+                        <button class="rightBtn" onclick="nextBtnPressed(3, +1)"></button> 
+                    </span>
+                </div>
+                <div class = "right">
+                    <div class = "title"> Apple Fest Website</div>
+                    <div class = "subtitle"> November 2016</div>
+                    <div class = "space"></div>
+                    <div class = "description"> As our final project for the three-credit course for Introductory Design and Programming for the Web, based on user research from eight individuals, I along with three other members redesigned Ithaca's Apple Harvest Festival website. I was responsible for the general design and code structure for the website. I implemented a sticky navigation bar with JS animations, the Schedule of Events page that utilized PHP to load events information into the table, and created the footer. </div>
+                    <div class = "space"></div>
+                    <div class = "iconSection">
+                        <div class = "icon">
+                            <a class = "iconImage gitHub" href="https://github.com/amandaong/AppleFestWebsite" target="_blank">HELLO</a> 
+                            <a class = "iconTitle gitHub" href="https://github.com/amandaong/AppleFestWebsite" target="_blank"> Check out the source code on GitHub </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "section contact" anchor = "4thPage">
+            <div class = "title"> Amanda Ong </div>
+            <div class = "subtitle"> ayo3@cornell.edu </div>
+            <div class="mail">
+                <a href="mailto:ayo3@cornell.edu" target="_top"> Email Me </a>
+            </div>
+            <ul>
+                <li class = "resume">
+                    <a href="https://www.dropbox.com/s/g6loicj519fdb2v/Resume.pdf?dl=0" target="_blank"> <figure>
+                        <div class = "contactImage resume"> </div>
+                        <figcaption>Resume</figcaption>
+                    </figure></a>
+                </li>
+                <li class = "gitHub">
+                    <a href="https://github.com/amandaong" target="_blank"> <figure>
+                            <div class = "contactImage gitHub"></div>
+                            <figcaption>GitHub</figcaption>
+                    </figure></a>
+                </li>
+                <li class = "linkedIn">
+                    <a href="https://www.linkedin.com/in/amandaong1/" target="_blank"> <figure>
+                        <div class = "contactImage linkedIn"></div>
+                        <figcaption>LinkedIn</figcaption>
+                    </figure></a>
+                </li>
+           </ul>
+            <div class = "footer"> © 2016 Amanda Ong. All rights reserved. </div>
+        </div>
+    </div>  
+    </body>
+</html>
