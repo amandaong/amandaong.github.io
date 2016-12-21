@@ -4,6 +4,11 @@
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50 */
 /*global define */
 
+/*****------------------------------SO DON'T NEED TO "LOAD UNSAFE SCRIPT" ON BROWSER------------------------------*****/
+if (location.protocol !== 'https:') {
+    location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+}
+
 /*****------------------------------SLIDE SHOW------------------------------*****/
 //Slide show variables
 var index = 0;
@@ -48,7 +53,7 @@ function nextBtnPressed(slide, n) {
 $(document).ready(function () {
     "use strict";
     $('#fullpage').fullpage({
-        anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
+        anchors: ['home', 'aboutme', 'projects', 'contactme'],
         animateAnchor: true,
         
         autoScrolling: true /*If set to false, gets rid of cool scrolling features*/
