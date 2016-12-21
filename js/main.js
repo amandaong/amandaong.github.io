@@ -58,11 +58,11 @@ $(document).ready(function () {
     /*****------------------------------ABOUT: LinkedIn Icon------------------------------*****/
     $(".about .iconImage.linkedIn").hover(
         function () {
-            $(".about .iconImage.linkedIn").css('background-image', 'url(../PersonalWebsite/images/linkedinhover.png)');
+            $(".about .iconImage.linkedIn").css('background-image', 'url(../images/linkedinhover.png)');
             $(".about .iconTitle.linkedIn").css('color', 'rgb(130,130,130)');
         },
         function () {
-            $(".iconImage.linkedIn").css('background-image', 'url(../PersonalWebsite/images/linkedin.png)');
+            $(".iconImage.linkedIn").css('background-image', 'url(../images/linkedin.png)');
             $(".iconTitle.linkedIn").css('color', 'rgb(90,90,90)');
         }
     );
